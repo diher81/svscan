@@ -1,24 +1,27 @@
 package nl.solevision.svscan.ui;
 
-import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+import org.springframework.stereotype.Component;
 
-public class NAWScene {
+@Component
+public class PersonalDataView {
     
-    public Scene getPersonalDataForm() {
-        GridPane gridPane = getGridPane();
+    public Scene createScene(Stage primaryStage) {
+        VBox layout = new VBox();
 
-        gridPane.getChildren().addAll(getLblTitle(), getLblFirstName(), getTxtFirstName(),
+        layout.getChildren().addAll(getLblTitle(), getLblFirstName(), getTxtFirstName(),
                 getLblMiddleName(), getTxtMiddleName(), getLblSurname(), getTxtSurname(),
                 getLblDateOfBirth(), getTxtDateOfBirth(), getLblEmail(), getTxtEmail(),
                 getLblSex(), getRadioMale(), getRadioFemale(), getBtnNext());
 
-        return new Scene(gridPane, 400, 300);
+        return new Scene(layout, 400, 300);
     }
 
     private static Button getBtnNext() {
@@ -117,14 +120,5 @@ public class NAWScene {
         Label lblTitle = new Label("Vul aub onderstaande gegevens in.");
         GridPane.setConstraints(lblTitle, 0, 0);
         return lblTitle;
-    }
-
-    private static GridPane getGridPane() {
-        GridPane gridPane = new GridPane();
-
-        gridPane.setPadding(new Insets(10, 10, 10, 10));
-        gridPane.setVgap(8);
-        gridPane.setHgap(10);
-        return gridPane;
     }
 }
