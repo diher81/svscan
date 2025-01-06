@@ -1,8 +1,9 @@
-package nl.solevision.svscan.frontend;
+package nl.solevision.svscan.view;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
 import nl.solevision.svscan.SvScanApplication;
+import nl.solevision.svscan.frontend.PersonalDataScene;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
