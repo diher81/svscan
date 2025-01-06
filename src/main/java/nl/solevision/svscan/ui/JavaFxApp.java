@@ -1,27 +1,29 @@
-package nl.solevision.svscan.view;
+package nl.solevision.svscan.ui;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import nl.solevision.svscan.SvScanApplication;
-import nl.solevision.svscan.frontend.PersonalDataScene;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 
 public class JavaFxApp extends Application {
 
+    private static ConfigurableApplicationContext springContext;
 
-    PersonalDataScene personalDataScene = new PersonalDataScene();
+    private NAWScene nawScene = new NAWScene();
 
-    @Override
-    public void init() throws Exception {
-        ApplicationContext springContext = new AnnotationConfigApplicationContext(SvScanApplication.class);
+    public static void launchApp(ConfigurableApplicationContext context, String[] args) {
+        springContext = context;
+        launch(args);
     }
 
     @Override
-    public void start(Stage stage) throws Exception {
-
+    public void start(Stage stage) {
         stage.setTitle("SoleVision scanner");
-        stage.setScene(personalDataScene.getPersonalDataForm());
+        stage.setScene(nawScene.getPersonalDataForm());
         stage.show();
+    }
+
+    @Override
+    public void stop() {
+        springContext.close();
     }
 }

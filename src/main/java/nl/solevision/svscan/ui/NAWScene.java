@@ -1,4 +1,4 @@
-package nl.solevision.svscan.frontend;
+package nl.solevision.svscan.ui;
 
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -8,7 +8,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 
-public class PersonalDataScene {
+public class NAWScene {
     
     public Scene getPersonalDataForm() {
         GridPane gridPane = getGridPane();
