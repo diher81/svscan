@@ -16,13 +16,18 @@ public class JavaFxApp extends Application {
     }
 
     @Override
-    public void start(Stage stage) {
-        MainController mainController = springContext.getBean(MainController.class);
-        Scene mainScene = new Scene(mainController.getMainView().createView(stage), 800, 600);
+    public void start(Stage stage) throws Exception{
+        try {
+            MainController mainController = springContext.getBean(MainController.class);
+            Scene mainScene = new Scene(mainController.getMainView().createView(stage), 800, 600);
 
-        stage.setTitle("SoleVision scanner");
-        stage.setScene(mainScene);
-        stage.show();
+            stage.setTitle("SoleVision scanner");
+            stage.setScene(mainScene);
+            stage.show();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
