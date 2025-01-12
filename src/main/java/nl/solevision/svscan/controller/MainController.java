@@ -1,11 +1,7 @@
 package nl.solevision.svscan.controller;
 
-import lombok.Getter;
-import nl.solevision.svscan.ui.MainView;
-import org.springframework.stereotype.Controller;
+import nl.solevision.svscan.gui.MainView;
 
-@Getter
-@Controller
 public class MainController {
 
     private final MainView mainView;

@@ -1,15 +1,12 @@
 package nl.solevision.svscan;
 
-import nl.solevision.svscan.ui.JavaFxApp;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ConfigurableApplicationContext;
+import nl.solevision.svscan.gui.CallRocketDemo;
 
-@SpringBootApplication
-public class SvScanApplication {
+import javax.swing.*;
 
-	public static void main(String[] args) {
-		ConfigurableApplicationContext context = SpringApplication.run(SvScanApplication.class, args);
-		JavaFxApp.launchApp(context, args);
-	}
+public class SvScanApplication extends JFrame {
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(CallRocketDemo::new);
+    }
 }

@@ -1,5 +1,5 @@
-//package nl.solevision.svscan.ui;
-//
+package nl.solevision.svscan.gui;
+
 //import javafx.scene.Scene;
 //import javafx.scene.control.Button;
 //import javafx.scene.control.Label;
@@ -8,11 +8,9 @@
 //import javafx.scene.layout.GridPane;
 //import javafx.scene.layout.VBox;
 //import javafx.stage.Stage;
-//import org.springframework.stereotype.Component;
-//
-//@Component
-//public class PersonalDataView {
-//
+
+public class PersonalDataView {
+    
 //    public Scene createScene(Stage primaryStage) {
 //        VBox layout = new VBox();
 //
@@ -121,4 +119,4 @@
 //        GridPane.setConstraints(lblTitle, 0, 0);
 //        return lblTitle;
 //    }
-//}
+}
