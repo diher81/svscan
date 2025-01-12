@@ -7,7 +7,6 @@ import javax.swing.*;
 public class CallRocketDemo extends JFrame {
     private final RocketHelper rocketHelper = new RocketHelper();
     private final JLabel resultLabel;
-    private JRadioButton onButton, offButton;
 
     public CallRocketDemo() {
         setTitle("CallRocket");
@@ -24,12 +23,12 @@ public class CallRocketDemo extends JFrame {
         startButton.addActionListener(e -> setResult(rocketHelper.rocketStart()));
         add(startButton);
 
-        onButton = new JRadioButton("Laser On");
+        JRadioButton onButton = new JRadioButton("Laser On");
         onButton.setBounds(180, 120, 100, 40);
         onButton.addActionListener(e -> setResult(rocketHelper.rocketTurnOnOffHeelToeLaser(true)));
         add(onButton);
 
-        offButton = new JRadioButton("Laser Off");
+        JRadioButton offButton = new JRadioButton("Laser Off");
         offButton.setBounds(300, 120, 100, 40);
         offButton.addActionListener(e -> setResult(rocketHelper.rocketTurnOnOffHeelToeLaser(false)));
         add(offButton);
