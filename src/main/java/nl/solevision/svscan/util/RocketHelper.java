@@ -19,6 +19,10 @@ public class RocketHelper {
         return callRocket("-start");
     }
 
+    public String obtainSerialNo() {
+        return callRocket("-machine");
+    }
+
     public String rocketExit() {
         return callRocket("-exit");
     }
@@ -30,5 +34,15 @@ public class RocketHelper {
     public String rocketScan(boolean left, String firstName, String lastName, int gender, String password) {
         String footSide = left ? "-l" : "-r";
         return callRocket("-scan " + footSide + " " + firstName + " " + lastName + " " + gender + " " + password);
+    }
+
+    public String scanLeftFoot() {
+        //todo to implement?
+        return callRocket("todo");
+    }
+
+    public String scanRightFoot() {
+        //todo to implement?
+        return callRocket("todo");
     }
 }
