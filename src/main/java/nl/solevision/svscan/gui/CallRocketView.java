@@ -4,11 +4,11 @@ import nl.solevision.svscan.util.RocketHelper;
 
 import javax.swing.*;
 
-public class CallRocketDemo extends JFrame {
+public class CallRocketView extends JFrame {
     private final RocketHelper rocketHelper = new RocketHelper();
     private final JLabel lblResult;
 
-    public CallRocketDemo() {
+    public CallRocketView() {
         setTitle("CallRocket");
         setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

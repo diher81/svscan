@@ -9,8 +9,26 @@ package nl.solevision.svscan.gui;
 //import javafx.scene.layout.VBox;
 //import javafx.stage.Stage;
 
-public class PersonalDataView {
-    
+import javax.swing.*;
+
+public class PersonalDataView extends JFrame {
+
+
+    public PersonalDataView() {
+        setTitle("CallRocket");
+        setSize(800, 600);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(null);
+
+        JButton btnNext = new JButton("Volgende");
+        btnNext.setBounds(125, 360, 120, 40);
+        btnNext.addActionListener(e -> {
+            //setResult(rocketHelper.rocketExit());
+        });
+        add(btnNext);
+    }
+
+
 //    public Scene createScene(Stage primaryStage) {
 //        VBox layout = new VBox();
 //
