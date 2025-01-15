@@ -26,26 +26,21 @@ public class PersonalDataView extends JFrame {
             //setResult(rocketHelper.rocketExit());
         });
         add(btnNext);
+
+        JRadioButton btnFemale = new JRadioButton("Vrouwelijk");
+        btnFemale.setBounds(125, 100, 10, 10);
+
+        JRadioButton btnMale = new JRadioButton("Mannelijk");
+        btnMale.setBounds(175, 100, 10, 10);
+
+        ButtonGroup gender = new ButtonGroup();
+        gender.add(btnMale);
+        gender.add(btnFemale);
+
     }
 
 
-//    public Scene createScene(Stage primaryStage) {
-//        VBox layout = new VBox();
-//
-//        layout.getChildren().addAll(getLblTitle(), getLblFirstName(), getTxtFirstName(),
-//                getLblMiddleName(), getTxtMiddleName(), getLblSurname(), getTxtSurname(),
-//                getLblDateOfBirth(), getTxtDateOfBirth(), getLblEmail(), getTxtEmail(),
-//                getLblSex(), getRadioMale(), getRadioFemale(), getBtnNext());
-//
-//        return new Scene(layout, 400, 300);
-//    }
-//
-//    private static Button getBtnNext() {
-//        Button button = new Button();
-//        button.setText("Volgende");
-//        GridPane.setConstraints(button, 1, 9);
-//        return button;
-//    }
+
 //
 //    private static RadioButton getRadioFemale() {
 //        RadioButton radioFemale = new RadioButton();
