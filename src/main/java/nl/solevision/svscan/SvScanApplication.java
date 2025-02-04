@@ -1,12 +1,19 @@
 package nl.solevision.svscan;
 
-import nl.solevision.svscan.gui.CallRocketDemo;
+import nl.solevision.svscan.gui.MainFrame;
 
 import javax.swing.*;
 
 public class SvScanApplication extends JFrame {
 
+//    public static void main(String[] args) {
+//        SwingUtilities.invokeLater(() -> new MainFrame().setVisible(true));
+//    }
+
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new CallRocketDemo().setVisible(true));
+        SwingUtilities.invokeLater(() -> {
+            MainFrame frame = new MainFrame();
+            frame.setVisible(true);
+        });
     }
 }

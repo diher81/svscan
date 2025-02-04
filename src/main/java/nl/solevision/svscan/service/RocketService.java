@@ -8,12 +8,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class RocketHelper {
+public class RocketService {
 
     private Map<Integer, String> rocketStatus = new HashMap<>();
     private int statusNumber = 0;
 
-    public RocketHelper() {
+    public RocketService() {
         initStatus();
     }
 
