@@ -6,10 +6,6 @@ import javax.swing.*;
 
 public class SvScanApplication extends JFrame {
 
-//    public static void main(String[] args) {
-//        SwingUtilities.invokeLater(() -> new MainFrame().setVisible(true));
-//    }
-
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             MainFrame frame = new MainFrame();

@@ -6,33 +6,21 @@ import nl.solevision.svscan.service.RocketService;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 
-public class MainView extends JPanel implements NavigationObserver {
+public class ScanView extends JPanel implements NavigationObserver {
 
-    private RocketService rocketService = new RocketService();
-    private JLabel resultLabel = new JLabel();
-    private java.util.List<JComponent> controls = new ArrayList<>();
-    private ButtonGroup laserGroup = new ButtonGroup();
+    private final RocketService rocketService = new RocketService();
+    private final JLabel resultLabel = new JLabel();
+    private final java.util.List<JComponent> controls = new ArrayList<>();
+    private final ButtonGroup laserGroup = new ButtonGroup();
 
-    public MainView(NavigationObserver observer) {
+    public ScanView(NavigationObserver observer) {
         initializeUI(observer);
         doTask(0); // Start Rocket
     }
 
     private void initializeUI(NavigationObserver observer) {
-//        setTitle("CallRocket");
-//        setSize(800, 600);
-//        setResizable(false);
-//        setLayout(null);
-//        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
-//        addWindowListener(new WindowAdapter() {
-//            public void windowClosing(WindowEvent e) {
-//                doTask(4);
-//            }
-//        });
 
         // Components
         JButton btnSerial = createButton("Obtain Serial No.", 125, 60, e -> doTask(5));
@@ -60,6 +48,10 @@ public class MainView extends JPanel implements NavigationObserver {
                 "You can edit the settings XML file before each scan.");
         addTips(450, 200, "You also need to ensure the file save folder exist and you can write to it. " +
                 "Otherwise our software will write the files to the desktop.");
+
+        JButton startButton = new JButton("Volgende");
+        startButton.addActionListener(e -> observer.onNavigate("GOODBYE"));
+        add(startButton, BorderLayout.SOUTH);
     }
 
     private JButton createButton(String text, int x, int y, ActionListener listener) {

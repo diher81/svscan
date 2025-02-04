@@ -9,9 +9,11 @@ public class WelcomeView extends JPanel {
 
     public WelcomeView(NavigationObserver observer) {
         setLayout(new BorderLayout());
+
+        add(new JLabel("Welkom bij SVScan", SwingConstants.CENTER), BorderLayout.CENTER);
+
         JButton startButton = new JButton("Start");
         startButton.addActionListener(e -> observer.onNavigate("CUSTOMER_DETAILS"));
-        add(new JLabel("Welcome to Foot Scanner", SwingConstants.CENTER), BorderLayout.CENTER);
         add(startButton, BorderLayout.SOUTH);
     }
 }

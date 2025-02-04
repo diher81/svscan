@@ -4,9 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 
 public class NavigationController {
-    private JFrame mainFrame;
-    private CardLayout cardLayout;
-    private JPanel viewsPanel;
+    private final JFrame mainFrame;
+    private final CardLayout cardLayout;
+    private final JPanel viewsPanel;
 
     public NavigationController(JFrame mainFrame) {
         this.mainFrame = mainFrame;

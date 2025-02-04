@@ -6,13 +6,14 @@ import javax.swing.*;
 import java.awt.*;
 
 public class InfoView extends JPanel {
+
     public InfoView(NavigationObserver observer) {
         setLayout(new BorderLayout());
-        add(new JLabel("<html><center>Important Information<br>About the Scanning Process</center></html>"),
+        add(new JLabel("<html><center>Belangrijke informatie<br>over het scanproces</center></html>"),
                 BorderLayout.CENTER);
 
-        JButton nextButton = new JButton("Continue");
-        nextButton.addActionListener(e -> observer.onNavigate("THANK_YOU"));
+        JButton nextButton = new JButton("Volgende");
+        nextButton.addActionListener(e -> observer.onNavigate("SCAN"));
         add(nextButton, BorderLayout.SOUTH);
     }
 }
