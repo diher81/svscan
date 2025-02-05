@@ -3,7 +3,6 @@ package nl.solevision.svscan.gui;
 import nl.solevision.svscan.gui.navigation.NavigationController;
 import nl.solevision.svscan.gui.navigation.NavigationObserver;
 import nl.solevision.svscan.gui.view.*;
-import nl.solevision.svscan.service.CustomerDataService;
 import nl.solevision.svscan.service.CustomerDataServiceImpl;
 import nl.solevision.svscan.service.RocketServiceImpl;
 

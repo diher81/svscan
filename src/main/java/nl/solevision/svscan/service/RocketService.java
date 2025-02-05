@@ -13,11 +13,7 @@ public interface RocketService {
 
     int rocketTurnOnOffHeelToeLaser(int iOn);
 
-    int rocketScan(boolean bLeft, String strFirstName, String strLastName,
-                          int iGender, String strPassword);
-
-    int rocketScanByFootSwitch(boolean bLeft, String strFirstName,
-                                      String strLastName, int iGender, String strPassword);
+    int rocketScan(String strFirstName, String strLastName, int iGender, String strPassword);
 
     int rocketSave();
 

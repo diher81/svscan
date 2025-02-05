@@ -43,25 +43,12 @@ public class RocketServiceImpl implements RocketService {
         return callRocket(command);
     }
 
-    public int rocketScan(boolean bLeft, String strFirstName, String strLastName,
+    public int rocketScan(String strFirstName, String strLastName,
                           int iGender, String strPassword) {
         List<String> command = new ArrayList<>();
         command.add("C:\\XSOL_3D_Foot_Scan\\Bin\\XSOL_Rocket.exe");
         command.add("-scan");
-        command.add(bLeft ? "-l" : "-r");
-        command.add(strFirstName);
-        command.add(strLastName);
-        command.add(String.valueOf(iGender));
-        command.add(strPassword);
-        return callRocket(command);
-    }
-
-    public int rocketScanByFootSwitch(boolean bLeft, String strFirstName,
-                                      String strLastName, int iGender, String strPassword) {
-        List<String> command = new ArrayList<>();
-        command.add("C:\\XSOL_3D_Foot_Scan\\Bin\\XSOL_Rocket.exe");
-        command.add("-scanbyfootswitch");
-        command.add(bLeft ? "-l" : "-r");
+        command.add("-l");
         command.add(strFirstName);
         command.add(strLastName);
         command.add(String.valueOf(iGender));
@@ -89,6 +76,7 @@ public class RocketServiceImpl implements RocketService {
             Process process = pb.start();
             return process.waitFor();
         } catch (IOException | InterruptedException e) {
+            // todo exception
             e.printStackTrace();
             return -1;
         }

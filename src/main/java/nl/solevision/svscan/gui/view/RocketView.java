@@ -32,11 +32,7 @@ public class RocketView extends JPanel implements NavigationObserver {
         laserGroup.add(btnLaserOn);
         laserGroup.add(btnLaserOff);
 
-//        JButton btnScanLeft = createButton("Scan linkervoet", 50, 180, e -> doTask(1));
-//        JButton btnScanRight = createButton("Scan rechtervoet", 200, 180, e -> doTask(2));
         JButton btnScan = createButton("Scan voeten", 50, 180, e -> doTask(1));
-        JButton btnScanLeftFootSwitch = createButton("Scan linkervoet switch", 10, 240, e -> doTask(8));
-        JButton btnScanRightFootSwitch = createButton("Scan rechtervoet switch", 210, 240, e -> doTask(9));
         JButton btnSave = createButton("Bestand opslaan", 125, 300, e -> doTask(3));
         JButton btnExit = createButton("Afsluiten", 125, 360, e -> doTask(4));
 
@@ -115,12 +111,12 @@ public class RocketView extends JPanel implements NavigationObserver {
                         statusText = rocketService.getStatusInfo(exitCode);
                         break;
                     case 1:
-                        exitCode = rocketService.rocketScan(true, "John", "Doe", 0, "000000000000");
+                        exitCode = rocketService.rocketScan("John", "Doe", 0, "000000000000");
                         statusText = rocketService.getStatusInfo(exitCode);
                         break;
                     case 2:
-                        exitCode = rocketService.rocketScan(false, "John", "Doe", 0, "000000000000");
-                        statusText = rocketService.getStatusInfo(exitCode);
+//                        exitCode = rocketService.rocketScan(false, "John", "Doe", 0, "000000000000");
+//                        statusText = rocketService.getStatusInfo(exitCode);
                         break;
                     case 3:
                         exitCode = rocketService.rocketSave();
@@ -143,12 +139,12 @@ public class RocketView extends JPanel implements NavigationObserver {
                         statusText = rocketService.getStatusInfo(exitCode);
                         break;
                     case 8:
-                        exitCode = rocketService.rocketScanByFootSwitch(true, "John", "Doe", 0, "000000000000");
-                        statusText = rocketService.getStatusInfo(exitCode);
+//                        exitCode = rocketService.rocketScanByFootSwitch(true, "John", "Doe", 0, "000000000000");
+//                        statusText = rocketService.getStatusInfo(exitCode);
                         break;
                     case 9:
-                        exitCode = rocketService.rocketScanByFootSwitch(false, "John", "Doe", 0, "000000000000");
-                        statusText = rocketService.getStatusInfo(exitCode);
+//                        exitCode = rocketService.rocketScanByFootSwitch(false, "John", "Doe", 0, "000000000000");
+//                        statusText = rocketService.getStatusInfo(exitCode);
                         break;
                     default:
                         statusText = "Unknown task";
