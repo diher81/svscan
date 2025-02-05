@@ -1,13 +1,21 @@
 package nl.solevision.svscan.gui.view;
 
 import nl.solevision.svscan.gui.navigation.NavigationObserver;
+import nl.solevision.svscan.service.CustomerDataService;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class CustomerDetailsView extends JPanel {
+public class CustomerDataView extends JPanel {
 
-    public CustomerDetailsView(NavigationObserver observer) {
+    private final CustomerDataService customerDataService;
+
+    public CustomerDataView(NavigationObserver observer, CustomerDataService customerDataService) {
+        this.customerDataService = customerDataService;
+        initializeUI(observer);
+    }
+
+    private void initializeUI(NavigationObserver observer) {
         setLayout(new GridLayout(5, 2));
 
         add(new JLabel("Voornaam:"));

@@ -8,14 +8,15 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class ScanView extends JPanel implements NavigationObserver {
+public class RocketView extends JPanel implements NavigationObserver {
 
-    private final RocketService rocketService = new RocketService();
+    private final RocketService rocketService;
     private final JLabel resultLabel = new JLabel();
     private final java.util.List<JComponent> controls = new ArrayList<>();
     private final ButtonGroup laserGroup = new ButtonGroup();
 
-    public ScanView(NavigationObserver observer) {
+    public RocketView(NavigationObserver observer, RocketService rocketService) {
+        this.rocketService = rocketService;
         initializeUI(observer);
         doTask(0); // Start Rocket
     }

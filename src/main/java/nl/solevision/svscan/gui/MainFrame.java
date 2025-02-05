@@ -3,6 +3,9 @@ package nl.solevision.svscan.gui;
 import nl.solevision.svscan.gui.navigation.NavigationController;
 import nl.solevision.svscan.gui.navigation.NavigationObserver;
 import nl.solevision.svscan.gui.view.*;
+import nl.solevision.svscan.service.CustomerDataService;
+import nl.solevision.svscan.service.CustomerDataServiceImpl;
+import nl.solevision.svscan.service.RocketServiceImpl;
 
 import javax.swing.*;
 
@@ -21,11 +24,21 @@ public class MainFrame extends JFrame implements NavigationObserver {
     }
 
     private void initializeViews() {
-        navigationController.registerView("WELCOME", new WelcomeView(this));
-        navigationController.registerView("CUSTOMER_DETAILS", new CustomerDetailsView(this));
-        navigationController.registerView("INFO", new InfoView(this));
-        navigationController.registerView("SCAN", new ScanView(this));
-        navigationController.registerView("GOODBYE", new GoodByeView());
+        navigationController.registerView(
+                "WELCOME",
+                new WelcomeView(this));
+        navigationController.registerView(
+                "CUSTOMER_DETAILS",
+                new CustomerDataView(this, new CustomerDataServiceImpl()));
+        navigationController.registerView(
+                "INFO",
+                new InfoView(this));
+        navigationController.registerView(
+                "SCAN",
+                new RocketView(this, new RocketServiceImpl()));
+        navigationController.registerView(
+                "GOODBYE",
+                new GoodByeView());
 
         navigationController.navigateTo("WELCOME");
     }
