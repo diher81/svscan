@@ -31,10 +31,11 @@ public class ScanView extends JPanel implements NavigationObserver {
         laserGroup.add(btnLaserOn);
         laserGroup.add(btnLaserOff);
 
-        JButton btnScanLeft = createButton("Scan linkervoet", 50, 180, e -> doTask(1));
-        JButton btnScanRight = createButton("Scan rechtervoet", 200, 180, e -> doTask(2));
-        JButton btnScanLeftFootswitch = createButton("Scan Left Foot By Foot switch", 10, 240, e -> doTask(8));
-        JButton btnScanRightFootswitch = createButton("Scan Right Foot By Foot switch", 210, 240, e -> doTask(9));
+//        JButton btnScanLeft = createButton("Scan linkervoet", 50, 180, e -> doTask(1));
+//        JButton btnScanRight = createButton("Scan rechtervoet", 200, 180, e -> doTask(2));
+        JButton btnScan = createButton("Scan voeten", 50, 180, e -> doTask(1));
+        JButton btnScanLeftFootSwitch = createButton("Scan linkervoet switch", 10, 240, e -> doTask(8));
+        JButton btnScanRightFootSwitch = createButton("Scan rechtervoet switch", 210, 240, e -> doTask(9));
         JButton btnSave = createButton("Bestand opslaan", 125, 300, e -> doTask(3));
         JButton btnExit = createButton("Afsluiten", 125, 360, e -> doTask(4));
 
@@ -43,11 +44,8 @@ public class ScanView extends JPanel implements NavigationObserver {
         resultLabel.setBackground(Color.WHITE);
         add(resultLabel);
 
-        addTips(450, 50, "Rocket callout draws parameters from settings XML file under " +
-                "C:\\XSOL_3D_Foot_Scan\\Bin\\Customize\\Settings. Refer to Command-Line section. " +
-                "You can edit the settings XML file before each scan.");
-        addTips(450, 200, "You also need to ensure the file save folder exist and you can write to it. " +
-                "Otherwise our software will write the files to the desktop.");
+        addTips(450, 50, "tips");
+        addTips(450, 200, "tips");
 
         JButton startButton = new JButton("Volgende");
         startButton.addActionListener(e -> observer.onNavigate("GOODBYE"));
@@ -144,11 +142,11 @@ public class ScanView extends JPanel implements NavigationObserver {
                         statusText = rocketService.getStatusInfo(exitCode);
                         break;
                     case 8:
-                        exitCode = rocketService.rocketScanByFootswitch(true, "John", "Doe", 0, "000000000000");
+                        exitCode = rocketService.rocketScanByFootSwitch(true, "John", "Doe", 0, "000000000000");
                         statusText = rocketService.getStatusInfo(exitCode);
                         break;
                     case 9:
-                        exitCode = rocketService.rocketScanByFootswitch(false, "John", "Doe", 0, "000000000000");
+                        exitCode = rocketService.rocketScanByFootSwitch(false, "John", "Doe", 0, "000000000000");
                         statusText = rocketService.getStatusInfo(exitCode);
                         break;
                     default:

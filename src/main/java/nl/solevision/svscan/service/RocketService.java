@@ -121,7 +121,7 @@ public class RocketService {
         return callRocket(command);
     }
 
-    public int rocketScanByFootswitch(boolean bLeft, String strFirstName,
+    public int rocketScanByFootSwitch(boolean bLeft, String strFirstName,
                                       String strLastName, int iGender, String strPassword) {
         List<String> command = new ArrayList<>();
         command.add("C:\\XSOL_3D_Foot_Scan\\Bin\\XSOL_Rocket.exe");
