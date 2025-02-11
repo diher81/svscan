@@ -44,7 +44,7 @@ public class CustomerDataView extends StyledPanel {
         genderGroup.add(btnMale);
         genderGroup.add(btnFemale);
 
-        JButton nextButton = new JButton("Volgende");
+        JButton nextButton = new StyledButton("Volgende");
         nextButton.addActionListener(e -> {
             // Validate and store data
             observer.onNavigate("INFO");

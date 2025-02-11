@@ -12,7 +12,7 @@ public class InfoView extends StyledPanel {
         add(new JLabel("<html><center>Belangrijke informatie<br>over het scanproces</center></html>"),
                 BorderLayout.CENTER);
 
-        JButton nextButton = new JButton("Volgende");
+        JButton nextButton = new StyledButton("Volgende");
         nextButton.addActionListener(e -> observer.onNavigate("SCAN"));
         add(nextButton, BorderLayout.SOUTH);
     }

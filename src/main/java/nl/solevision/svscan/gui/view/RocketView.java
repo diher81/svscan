@@ -44,13 +44,13 @@ public class RocketView extends StyledPanel implements NavigationObserver {
         addTips(450, 50, "tips");
         addTips(450, 200, "tips");
 
-        JButton startButton = new JButton("Volgende");
+        JButton startButton = new StyledButton("Volgende");
         startButton.addActionListener(e -> observer.onNavigate("GOODBYE"));
         add(startButton, BorderLayout.SOUTH);
     }
 
     private JButton createButton(String text, int x, int y, ActionListener listener) {
-        JButton btn = new JButton(text);
+        JButton btn = new StyledButton(text);
         btn.setBounds(x, y, 120, 40);
         btn.addActionListener(listener);
         add(btn);

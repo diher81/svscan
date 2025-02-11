@@ -12,7 +12,7 @@ public class WelcomeView extends StyledPanel {
 
         add(new JLabel("Welkom bij SVScan", SwingConstants.CENTER), BorderLayout.CENTER);
 
-        JButton startButton = new JButton("Start");
+        JButton startButton = new StyledButton("Start");
         startButton.addActionListener(e -> observer.onNavigate("CUSTOMER_DETAILS"));
         add(startButton, BorderLayout.SOUTH);
     }
