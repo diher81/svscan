@@ -1,5 +1,7 @@
 package nl.solevision.svscan.gui.navigation;
 
+import nl.solevision.svscan.gui.view.StyledPanel;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -15,7 +17,7 @@ public class NavigationController {
         mainFrame.add(viewsPanel);
     }
 
-    public void registerView(String name, JPanel view) {
+    public void registerView(String name, StyledPanel view) {
         viewsPanel.add(view, name);
     }
 

@@ -5,7 +5,7 @@ import nl.solevision.svscan.gui.navigation.NavigationObserver;
 import javax.swing.*;
 import java.awt.*;
 
-public class InfoView extends JPanel {
+public class InfoView extends StyledPanel {
 
     public InfoView(NavigationObserver observer) {
         setLayout(new BorderLayout());

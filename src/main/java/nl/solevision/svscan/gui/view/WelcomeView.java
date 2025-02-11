@@ -5,7 +5,7 @@ import nl.solevision.svscan.gui.navigation.NavigationObserver;
 import javax.swing.*;
 import java.awt.*;
 
-public class WelcomeView extends JPanel {
+public class WelcomeView extends StyledPanel {
 
     public WelcomeView(NavigationObserver observer) {
         setLayout(new BorderLayout());

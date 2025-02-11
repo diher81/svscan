@@ -8,7 +8,7 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class RocketView extends JPanel implements NavigationObserver {
+public class RocketView extends StyledPanel implements NavigationObserver {
 
     private final RocketService rocketService;
     private final JLabel resultLabel = new JLabel();

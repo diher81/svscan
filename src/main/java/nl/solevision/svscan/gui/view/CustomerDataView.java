@@ -6,7 +6,7 @@ import nl.solevision.svscan.service.CustomerDataService;
 import javax.swing.*;
 import java.awt.*;
 
-public class CustomerDataView extends JPanel {
+public class CustomerDataView extends StyledPanel {
 
     private final CustomerDataService customerDataService;
 

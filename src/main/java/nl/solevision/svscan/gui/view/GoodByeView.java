@@ -3,7 +3,7 @@ package nl.solevision.svscan.gui.view;
 import javax.swing.*;
 import java.awt.*;
 
-public class GoodByeView extends JPanel {
+public class GoodByeView extends StyledPanel {
 
     public GoodByeView() {
         setLayout(new BorderLayout());
