@@ -1,5 +1,7 @@
 package nl.solevision.svscan.gui.view;
 
+import nl.solevision.svscan.gui.style.StyledPanel;
+
 import javax.swing.*;
 import java.awt.*;
 

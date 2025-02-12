@@ -1,6 +1,8 @@
 package nl.solevision.svscan.gui.view;
 
 import nl.solevision.svscan.gui.navigation.NavigationObserver;
+import nl.solevision.svscan.gui.style.StyledButton;
+import nl.solevision.svscan.gui.style.StyledPanel;
 import nl.solevision.svscan.service.RocketService;
 
 import javax.swing.*;

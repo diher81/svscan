@@ -1,6 +1,6 @@
 package nl.solevision.svscan.gui.navigation;
 
-import nl.solevision.svscan.gui.view.StyledPanel;
+import nl.solevision.svscan.gui.style.StyledPanel;
 
 import javax.swing.*;
 import java.awt.*;

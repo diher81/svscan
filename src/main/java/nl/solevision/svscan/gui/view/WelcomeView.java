@@ -1,6 +1,8 @@
 package nl.solevision.svscan.gui.view;
 
 import nl.solevision.svscan.gui.navigation.NavigationObserver;
+import nl.solevision.svscan.gui.style.StyledButton;
+import nl.solevision.svscan.gui.style.StyledPanel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -21,10 +23,10 @@ public class WelcomeView extends StyledPanel {
         JButton btnStart = new StyledButton("Start");
         btnStart.addActionListener(e -> observer.onNavigate("CUSTOMER_DETAILS"));
 
-        lblImgSoleVision.setAlignmentX(Component.CENTER_ALIGNMENT); // Centering
-        lblNoShoes.setAlignmentX(Component.CENTER_ALIGNMENT); // Centering
-        lblImgNoShoes.setAlignmentX(Component.CENTER_ALIGNMENT); // Centering
-        btnStart.setAlignmentX(Component.CENTER_ALIGNMENT); // Centering
+        lblImgSoleVision.setAlignmentX(Component.CENTER_ALIGNMENT);
+        lblNoShoes.setAlignmentX(Component.CENTER_ALIGNMENT);
+        lblImgNoShoes.setAlignmentX(Component.CENTER_ALIGNMENT);
+        btnStart.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         add(Box.createVerticalGlue());
         add(lblImgSoleVision);

@@ -1,4 +1,4 @@
-package nl.solevision.svscan.gui.view;
+package nl.solevision.svscan.gui.style;
 
 import javax.swing.*;
 import java.awt.*;
